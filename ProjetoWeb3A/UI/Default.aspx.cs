@@ -22,5 +22,12 @@ namespace ProjetoWeb3A
             GridProdutos.DataSource = bllProduto.PesquisarProdutos(condicao);
             GridProdutos.DataBind();
         }
+
+        protected void txtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            string condicao = "nomeProduto like '%" + txtPesquisar.Text + "%' or descricao like '%" + txtPesquisar.Text + "%'";
+            GridProdutos.DataSource = bllProduto.PesquisarProdutos(condicao);
+            GridProdutos.DataBind();
+        }
     }
 }
