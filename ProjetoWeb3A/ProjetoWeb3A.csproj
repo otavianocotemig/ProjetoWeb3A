@@ -180,8 +180,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="BLL\tblProdutoBLL.cs" />
     <Compile Include="DAL\DALBD.cs" />
+    <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="DTO\tblProdutoDTO.cs" />
     <Compile Include="UI\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

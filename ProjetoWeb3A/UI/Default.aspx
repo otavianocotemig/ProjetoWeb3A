@@ -7,8 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Projeto Web 3A</title>
     <link href="../Content/bootstrap.css" rel="stylesheet" />
-    <link href="../Content/signin.css" rel="stylesheet" />
-
+   
 </head>
 <body>
     <form id="form1" class="form-signin" runat="server">
@@ -44,7 +43,7 @@
                 </p>
             
             <br />
-            <asp:GridView ID="GridProdutos" CssClass="table table-light" runat="server">
+            <asp:GridView ID="GridProdutos" CssClass="table table-dark" runat="server">
             </asp:GridView>
         </div>
     </form>
