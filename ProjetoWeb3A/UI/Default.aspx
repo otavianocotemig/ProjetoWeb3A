@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Projeto Web 3A</title>
     <link href="../Content/bootstrap.css" rel="stylesheet" />
+    
    
 </head>
 <body>
@@ -22,6 +23,10 @@
               <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                   
+                   <li class="nav-item">
+                    <a class="nav-link" href="FrmLogin.aspx">Login</a>
+                  </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="FrmMeuPerfil.aspx">Meu Perfil</a>
                   </li>
