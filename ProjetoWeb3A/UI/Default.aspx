@@ -42,6 +42,7 @@
             </nav>
         <br />
         <div class="jumbotron">
+            <asp:Label ID="Label1" runat="server" Text="Digite o Produto que deseja Pesquisar"></asp:Label>
            <p>
             <asp:TextBox ID="txtPesquisar" runat="server" class="form-control" Width="293px" OnTextChanged="txtPesquisar_TextChanged"></asp:TextBox>
             <asp:Button ID="btnPesquisar" runat="server" Class="btn btn-lg btn-primary" Text="Pesquisar" Width="136px" OnClick="btnPesquisar_Click" />
