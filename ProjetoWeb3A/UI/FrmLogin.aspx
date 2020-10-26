@@ -15,8 +15,10 @@
             <h3>Acesso ao Sistema</h3>
             <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
             <asp:TextBox ID="txtEmail" class="form-control" type="email" runat="server"></asp:TextBox>
-
-            <asp:RequiredFieldValidator runat="server" ID="reqemail" ControlToValidate="txtEmail" ErrorMessage="Informe o campo email." />
+            <asp:RequiredFieldValidator runat="server" ID="reqemail" ControlToValidate="txtEmail" 
+                Forecolor="Red"
+                SetFocusOnError="true"
+                ErrorMessage="Campo Email é Obrigatório" />
 
             <br />
             <asp:Label ID="Label2" runat="server" Text="Senha"></asp:Label>
@@ -26,6 +28,8 @@
 
         </div>
         <asp:Label ID="msgerro" runat="server" ForeColor="#FF3300" Text="."></asp:Label>
+        <br />
+        <asp:LinkButton ID="btnEsqueciSenha" CssClass="btn btn-link" runat="server" OnClick="btnEsqueciSenha_Click">Esqueci Minha Senha</asp:LinkButton>
     </form>
 </body>
 </html>
