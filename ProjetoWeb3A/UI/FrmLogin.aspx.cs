@@ -28,7 +28,8 @@ namespace ProjetoWeb3A.UI
                 cliente.Senha_cliente = txtPassword.Text.Trim();
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
-                    msgerro.Text = "Cliente Localizado";
+                    Session["usuario"] = cliente.Email_cliente;
+                    Response.Redirect("Default.aspx");
 
                 }
                 else

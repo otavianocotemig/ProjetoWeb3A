@@ -11,9 +11,17 @@ namespace ProjetoWeb3A
     public partial class Default : System.Web.UI.Page
     {
         tblProdutoBLL bllProduto = new tblProdutoBLL();
+        // Metodo que é executado quando o browser carrega a pagina;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("FrmLogin.aspx");
+            }
+            else
+            {
+                usuarioLogado.Text = Session["usuario"].ToString();
+            }
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
@@ -28,6 +36,12 @@ namespace ProjetoWeb3A
             string condicao = "nomeProduto like '%" + txtPesquisar.Text + "%' or descricao like '%" + txtPesquisar.Text + "%'";
             GridProdutos.DataSource = bllProduto.PesquisarProdutos(condicao);
             GridProdutos.DataBind();
+        }
+
+        protected void BtnSair_Click(object sender, EventArgs e)
+        {
+            Session["usuario"] = null;
+            Response.Redirect("FrmLogin.aspx");
         }
     }
 }

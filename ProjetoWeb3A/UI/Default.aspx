@@ -10,7 +10,7 @@
     
    
 </head>
-<body>
+<body class="text-center">
     <form id="form1" class="form-signin" runat="server">
 
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -24,10 +24,6 @@
                 <ul class="navbar-nav mr-auto">
                   
                    <li class="nav-item">
-                    <a class="nav-link" href="FrmLogin.aspx">Login</a>
-                  </li>
-
-                  <li class="nav-item">
                     <a class="nav-link" href="FrmMeuPerfil.aspx">Meu Perfil</a>
                   </li>
                   <li class="nav-item">
@@ -36,7 +32,8 @@
                   
                 </ul>
               
-                  <asp:Button ID="BtnSair" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Sair"  />
+                  <asp:Label ID="usuarioLogado" runat="server" Text="dasdasdasd" ForeColor="White"> </asp:Label>
+                  <asp:Button ID="BtnSair" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Sair" OnClick="BtnSair_Click"  />
               
               </div>
             </nav>
