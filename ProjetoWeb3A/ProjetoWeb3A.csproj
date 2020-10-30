@@ -179,6 +179,7 @@
     <Content Include="UI\Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="UI\FrmLogin.aspx" />
+    <Content Include="UI\FrmMeuPerfil.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +205,13 @@
     </Compile>
     <Compile Include="UI\FrmLogin.aspx.designer.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMeuPerfil.aspx.cs">
+      <DependentUpon>FrmMeuPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMeuPerfil.aspx.designer.cs">
+      <DependentUpon>FrmMeuPerfil.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -26,10 +26,7 @@
                    <li class="nav-item">
                     <a class="nav-link" href="FrmMeuPerfil.aspx">Meu Perfil</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="FrmProdutos.aspx">Produtos</a>
-                  </li>
-                  
+                                   
                 </ul>
               
                   <asp:Label ID="usuarioLogado" runat="server" Text="dasdasdasd" ForeColor="White"> </asp:Label>
