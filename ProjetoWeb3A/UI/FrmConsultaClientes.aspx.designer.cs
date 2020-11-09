@@ -24,13 +24,13 @@ namespace ProjetoWeb3A.UI
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle TextBox1.
+        /// Controle txtPesquisa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtPesquisa;
 
         /// <summary>
         /// Controle btnPesquisar.
@@ -42,12 +42,12 @@ namespace ProjetoWeb3A.UI
         protected global::System.Web.UI.WebControls.Button btnPesquisar;
 
         /// <summary>
-        /// Controle GridView1.
+        /// Controle gridClientes.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gridClientes;
     }
 }
