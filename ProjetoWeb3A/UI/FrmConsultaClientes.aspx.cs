@@ -32,8 +32,10 @@ namespace ProjetoWeb3A.UI
             gridClientes.DataBind();
         }
 
+        // Metodo que controla a Paginação do Grid
         protected void gridClientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+
             gridClientes.PageIndex = e.NewPageIndex;
             exibirGrid();
         }
@@ -43,6 +45,36 @@ namespace ProjetoWeb3A.UI
             dtoCliente.Id_cliente = Convert.ToInt32(e.Values[0]);
             bllCliente.ExcluirCliente(dtoCliente);
             exibirGrid();
+        }
+
+        protected void gridClientes_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gridClientes.EditIndex = e.NewEditIndex;
+            exibirGrid();
+        }
+
+        protected void gridClientes_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            // Atributo que mudar o indice de edição para -1, ou seja define que não há itens para ser editado.
+            gridClientes.EditIndex = -1;
+            exibirGrid();
+        }
+
+        protected void gridClientes_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            // Passo os dados para o DTO
+            
+            dtoCliente.Nome_cliente = e.NewValues[1].ToString();
+            dtoCliente.Sobrenome_cliente = e.NewValues[2].ToString();
+            dtoCliente.Email_cliente = e.NewValues[3].ToString();
+            dtoCliente.Senha_cliente = e.NewValues[4].ToString();
+            dtoCliente.Cpf_cliente = e.NewValues[5].ToString();
+           
+            bllCliente.AlterarCliente(dtoCliente);
+            // Atributo que mudar o indice de edição para -1, ou seja define que não há itens para ser editado.
+            gridClientes.EditIndex = -1;
+            exibirGrid();
+            
         }
     }
 }
