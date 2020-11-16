@@ -18,12 +18,14 @@
 
             <asp:TextBox ID="txtPesquisa" CssClass="form-control"  runat="server" Width="156px"></asp:TextBox>
             <asp:Button ID="btnPesquisar" runat="server" CssClass="btn btn-lg btn-primary" Text="Pesquisar" OnClick="btnPesquisar_Click" />
+            <asp:Button ID="btnRetornar" runat="server" CssClass="btn btn-lg btn-primary" Text="Retornar" OnClick="btnRetornar_Click"  />
             
        
         <asp:GridView ID="gridClientes" CssClass="table table-striped" runat="server" AllowPaging="True" OnPageIndexChanging="gridClientes_PageIndexChanging" PageSize="5" OnRowDeleting="gridClientes_RowDeleting" OnRowCancelingEdit="gridClientes_RowCancelingEdit" OnRowEditing="gridClientes_RowEditing" OnRowUpdating="gridClientes_RowUpdating"  >
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" />
-                <asp:CommandField ShowEditButton="True"></asp:CommandField>
+                    <asp:CommandField ShowDeleteButton="True" />
+                    <asp:CommandField ShowEditButton="True">
+                </asp:CommandField>
             </Columns>
             <PagerSettings Position="TopAndBottom" />
          

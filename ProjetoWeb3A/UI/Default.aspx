@@ -46,7 +46,25 @@
                 </p>
             
             <br />
-            <asp:GridView ID="GridProdutos" CssClass="table table-dark" runat="server">
+            <asp:GridView ID="GridProdutos" CssClass="table table-striped" runat="server">
+                <Columns>
+                    
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:ImageButton ID="img1" runat="server" ImageUrl='<%# "~//imgProdutos//"+Eval("foto") %>' Width="80px" Height="80px" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+
+                     <asp:TemplateField>
+                        <ItemTemplate>
+                            <a href='FrmProdutosDetalhe.aspx?idProduto=<%#Eval("id") %>'>Detalhes</a>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+
+
+                </Columns>
             </asp:GridView>
         </div>
     </form>
