@@ -21,6 +21,13 @@ namespace ProjetoWeb3A.BLL
             string sql = string.Format($@"select * from tbl_produto where " + condicao);
             return daoBanco.ExecutarConsulta(sql);
         }
+
+        public DataTable consultarProdutos(int id_produto)
+        {
+            string sql = string.Format($@"select * from tbl_produto where id =  " + id_produto);
+            return daoBanco.ExecutarConsulta(sql);
+        }
+
         public DataTable PesquisarProdutos()
         {
             string sql = string.Format($@"select * from tbl_produto");
